@@ -7,14 +7,14 @@ import ua.lviv.trainapplogos.dao.StudentDao;
 import ua.lviv.trainapplogos.domain.Student;
 
 public class StudentDaoImpl implements StudentDao {
-	private static StudentDaoImpl studentDaoImpl;
+	private static StudentDaoImpl studentDao;
 	private List<Student> list = new ArrayList<>();
 	
-	public static StudentDaoImpl getStudentDaoImplInst() {
-		if (studentDaoImpl == null) {
-			studentDaoImpl = new StudentDaoImpl();
+	public static StudentDao getStudentDaoInst() {
+		if (studentDao == null) {
+			studentDao = new StudentDaoImpl();
 		}
-		return studentDaoImpl;
+		return studentDao;
 	}
 	
 	private StudentDaoImpl() {}
